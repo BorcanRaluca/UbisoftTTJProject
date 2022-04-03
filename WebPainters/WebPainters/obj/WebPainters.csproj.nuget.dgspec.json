@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP PAVILION\\Desktop\\UbisoftTTJProject\\WebPainters\\WebPainters\\WebPainters.csproj": {}
+    "C:\\Users\\anaif\\OneDrive\\Desktop\\Projects\\UbisoftTTJProject\\WebPainters\\WebPainters\\WebPainters.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP PAVILION\\Desktop\\UbisoftTTJProject\\WebPainters\\WebPainters\\WebPainters.csproj": {
+    "C:\\Users\\anaif\\OneDrive\\Desktop\\Projects\\UbisoftTTJProject\\WebPainters\\WebPainters\\WebPainters.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP PAVILION\\Desktop\\UbisoftTTJProject\\WebPainters\\WebPainters\\WebPainters.csproj",
+        "projectUniqueName": "C:\\Users\\anaif\\OneDrive\\Desktop\\Projects\\UbisoftTTJProject\\WebPainters\\WebPainters\\WebPainters.csproj",
         "projectName": "WebPainters",
-        "projectPath": "C:\\Users\\HP PAVILION\\Desktop\\UbisoftTTJProject\\WebPainters\\WebPainters\\WebPainters.csproj",
-        "packagesPath": "C:\\Users\\HP PAVILION\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP PAVILION\\Desktop\\UbisoftTTJProject\\WebPainters\\WebPainters\\obj\\",
+        "projectPath": "C:\\Users\\anaif\\OneDrive\\Desktop\\Projects\\UbisoftTTJProject\\WebPainters\\WebPainters\\WebPainters.csproj",
+        "packagesPath": "C:\\Users\\anaif\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\anaif\\OneDrive\\Desktop\\Projects\\UbisoftTTJProject\\WebPainters\\WebPainters\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\HP PAVILION\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\anaif\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +40,20 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
