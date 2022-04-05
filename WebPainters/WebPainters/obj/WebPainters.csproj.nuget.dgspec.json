@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\anaif\\OneDrive\\Desktop\\Projects\\UbisoftTTJProject\\WebPainters\\WebPainters\\WebPainters.csproj": {}
+    "C:\\Users\\pc\\Desktop\\UbisoftTTJProject\\WebPainters\\WebPainters\\WebPainters.csproj": {}
   },
   "projects": {
-    "C:\\Users\\anaif\\OneDrive\\Desktop\\Projects\\UbisoftTTJProject\\WebPainters\\WebPainters\\WebPainters.csproj": {
+    "C:\\Users\\pc\\Desktop\\UbisoftTTJProject\\WebPainters\\WebPainters\\WebPainters.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\anaif\\OneDrive\\Desktop\\Projects\\UbisoftTTJProject\\WebPainters\\WebPainters\\WebPainters.csproj",
+        "projectUniqueName": "C:\\Users\\pc\\Desktop\\UbisoftTTJProject\\WebPainters\\WebPainters\\WebPainters.csproj",
         "projectName": "WebPainters",
-        "projectPath": "C:\\Users\\anaif\\OneDrive\\Desktop\\Projects\\UbisoftTTJProject\\WebPainters\\WebPainters\\WebPainters.csproj",
-        "packagesPath": "C:\\Users\\anaif\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\anaif\\OneDrive\\Desktop\\Projects\\UbisoftTTJProject\\WebPainters\\WebPainters\\obj\\",
+        "projectPath": "C:\\Users\\pc\\Desktop\\UbisoftTTJProject\\WebPainters\\WebPainters\\WebPainters.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pc\\Desktop\\UbisoftTTJProject\\WebPainters\\WebPainters\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\anaif\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

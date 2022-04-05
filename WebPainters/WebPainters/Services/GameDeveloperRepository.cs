@@ -9,7 +9,7 @@ namespace WebPainters.Services
 {
     public class GameDeveloperRepository : IGameDeveloperRepository
     {
-        private readonly UbisoftTTJContext _context;
+        private readonly UbisoftTTJContext _context; //database
 
         public GameDeveloperRepository(UbisoftTTJContext ttjContext)
         {

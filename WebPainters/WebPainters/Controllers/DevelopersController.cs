@@ -36,7 +36,8 @@ namespace WebPainters.Controllers
                 {
                     Id = developer.Id,
                     Name = developer.Name,
-                    FoundingDate = (DateTime)developer.FoundingDate,
+                    Headquarters = developer.Headquartes,
+                    FoundingDate = ((DateTime)developer.FoundingDate).ToShortDateString(),
                     NoEmployees = Convert.ToInt32(developer.NoEmployees)
                 }) ;
             }
@@ -56,7 +57,8 @@ namespace WebPainters.Controllers
             {
                 Id = developerFromRepo.Id,
                 Name = developerFromRepo.Name,
-                FoundingDate = (DateTime)developerFromRepo.FoundingDate,
+                Headquarters = developerFromRepo.Headquartes,
+                FoundingDate = ((DateTime)developerFromRepo.FoundingDate).ToShortDateString(),
                 NoEmployees = Convert.ToInt32(developerFromRepo.NoEmployees)
             };
 
@@ -73,7 +75,8 @@ namespace WebPainters.Controllers
             {
                 Id = developer.Id,
                 Name = developer.Name,
-                FoundingDate = (DateTime)developer.FoundingDate,
+                Headquarters = developer.Headquartes,
+                FoundingDate = ((DateTime)developer.FoundingDate).ToShortDateString(),
                 NoEmployees = Convert.ToInt32(developer.NoEmployees)
             };
 
