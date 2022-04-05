@@ -19,8 +19,12 @@ namespace WebPainters.Services
         void DeleteGame(Game game);
         Task<Game> GetGameAsync(int developerId, int gameId);
         Task<IEnumerable<Game>> GetGamesAsync(int developerId);
-        Task<bool> SaveAsync();
 
-        //review 
+        //rating
+        void AddRating(int gameId, Rating rating);
+        Task<bool> GameExistsAsync(int gameId);
+        Task<IEnumerable<Rating>> GetRatingsAsync(int gameId);
+
+        Task<bool> SaveAsync();
     }
 }

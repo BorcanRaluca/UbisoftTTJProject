@@ -89,5 +89,32 @@ namespace WebPainters.Services
         {
             return await _context.SaveChangesAsync() >= 0;
         }
+
+        public void AddRating(int gameId, Rating rating)
+        {
+
+            if (rating == null)
+            {
+                throw new ArgumentNullException(nameof(Rating));
+            }
+            // always set the DeveloperId to the passed-in developerId
+            rating.GameId = gameId;
+            _context.Ratings.Add(rating);
+
+        }
+
+        //return the ratings for a certain game
+        public async Task<IEnumerable<Rating>> GetRatingsAsync(int gameId)
+        {
+            return await _context.Ratings
+                .Where(c => c.GameId == gameId)
+                .OrderBy(c => c.UserName).ToListAsync();
+        }
+
+        //check if it exists
+        public async Task<bool> GameExistsAsync(int gameId)
+        {
+            return await _context.Games.AnyAsync(a => a.Id == gameId);
+        }
     }
 }
