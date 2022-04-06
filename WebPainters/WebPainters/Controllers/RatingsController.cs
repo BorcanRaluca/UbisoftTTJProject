@@ -18,26 +18,23 @@ namespace WebPainters.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> AddRating(int gameId,Rating rating)
+        public async Task<ActionResult> AddRating(RatingDto ratingDto)
         {
-            _gameDeveloperRepository.AddRating(gameId, rating);
-            await _gameDeveloperRepository.SaveAsync();
-
-            var ratingResponse = new RatingDto()
+            Rating rating = new Rating()
             {
-                Id = rating.Id,
-                UserName = rating.UserName,
-                Note = rating.Note,
-                GameId = rating.GameId,
-                Comment = rating.Comment
+                Comment = ratingDto.Comment,
+                GameId = ratingDto.GameId,
+                Note = ratingDto.Note,
+                UserName = ratingDto.UserName
             };
 
-            return CreatedAtRoute("GetRating",
-                new { ratingId = ratingResponse.Id },
-                ratingResponse);
+            _gameDeveloperRepository.AddRating(rating);         
+            bool res = await _gameDeveloperRepository.SaveAsync();
+                    
+            return CreatedAtAction(nameof(GetRatingsByGame), new { gameId = rating.GameId }, rating);          
         }
 
-        [HttpGet ("{gameId}", Name = "GetRatings")]
+        [HttpGet ("{gameId}", Name = "getRatingsByGame")]
         public async Task<IActionResult> GetRatingsByGame(int gameId)
         {
             Console.WriteLine(gameId);
@@ -52,7 +49,7 @@ namespace WebPainters.Controllers
             }
 
             var ratingsFromRepo = await _gameDeveloperRepository.GetRatingsAsync(gameId);
-
+            
             return Ok(ratingsFromRepo);
         }
     }

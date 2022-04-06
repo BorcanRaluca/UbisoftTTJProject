@@ -90,15 +90,14 @@ namespace WebPainters.Services
             return await _context.SaveChangesAsync() >= 0;
         }
 
-        public void AddRating(int gameId, Rating rating)
+        public void AddRating(Rating rating)
         {
-
             if (rating == null)
             {
                 throw new ArgumentNullException(nameof(Rating));
             }
             // always set the DeveloperId to the passed-in developerId
-            rating.GameId = gameId;
+           // rating.GameId = gameId;
             _context.Ratings.Add(rating);
 
         }

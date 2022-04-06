@@ -21,7 +21,7 @@ namespace WebPainters.Services
         Task<IEnumerable<Game>> GetGamesAsync(int developerId);
 
         //rating
-        void AddRating(int gameId, Rating rating);
+        void AddRating(Rating rating);
         Task<bool> GameExistsAsync(int gameId);
         Task<IEnumerable<Rating>> GetRatingsAsync(int gameId);
 
