@@ -9,7 +9,7 @@ namespace WebPainters.Models
     {
         public int Id { get; set; }
         public string UserName { get; set; }
-        public string Note { get; set; }
+        public int Note { get; set; }
         public int GameId { get; set; }
         public string? Comment { get; set; }
      

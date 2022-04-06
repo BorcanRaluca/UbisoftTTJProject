@@ -32,7 +32,7 @@ namespace WebPainters.Controllers
                 Comment = rating.Comment
             };
 
-            return CreatedAtRoute("GetDeveloper",
+            return CreatedAtRoute("GetRating",
                 new { ratingId = ratingResponse.Id },
                 ratingResponse);
         }

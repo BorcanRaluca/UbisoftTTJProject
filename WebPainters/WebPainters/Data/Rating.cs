@@ -7,7 +7,7 @@ namespace WebPainters.Data
     {
         public int Id { get; set; }
         public string UserName { get; set; } = null!;
-        public string Note { get; set; } = null!;
+        public int Note { get; set; }
         public int GameId { get; set; }
         public string? Comment { get; set; }
 
