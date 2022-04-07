@@ -52,5 +52,49 @@ namespace WebPainters.Controllers
             
             return Ok(ratingsFromRepo);
         }
+
+        //get individual rating by id
+        [HttpGet("{gameId}/{ratingId}")]
+        public async Task<IActionResult> GetRatingByGame(int gameId, int ratingId)
+        {
+            if (!await _gameDeveloperRepository.RatingExistsAsync(ratingId))
+            {
+                ErrResponse errResponse = new ErrResponse()
+                {
+                    HttpCode = 404,
+                    Error = "Rating doesn't exist"
+                };
+                return NotFound(errResponse);
+            }
+
+            var ratingsFromRepo = await _gameDeveloperRepository.GetRatingAsync(gameId, ratingId);
+
+            if (ratingsFromRepo == null)
+            {
+                ErrResponse errResponse = new ErrResponse()
+                {
+                    HttpCode = 404,
+                    Error = $"GameID {gameId} doesn't exist for Rating ID {ratingId}"
+                };
+                return NotFound(errResponse);
+            }
+
+            return Ok(ratingsFromRepo);
+        }
+
+        //delete rating
+        [HttpDelete("{gameId}/{ratingId}")]
+        public async Task<ActionResult> DeleteRating(int gameId, int ratingId)
+        {
+            var ratingsFromRepo = await _gameDeveloperRepository.GetRatingAsync(gameId, ratingId);
+
+            if (ratingsFromRepo == null)
+                return NotFound();
+
+            _gameDeveloperRepository.DeleteRating(ratingsFromRepo);
+            await _gameDeveloperRepository.SaveAsync();
+
+            return NoContent();
+        }
     }
 }

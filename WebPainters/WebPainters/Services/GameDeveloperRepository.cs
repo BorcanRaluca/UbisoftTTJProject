@@ -115,5 +115,28 @@ namespace WebPainters.Services
         {
             return await _context.Games.AnyAsync(a => a.Id == gameId);
         }
+
+        //get rating by its id and game id
+        public async Task<Rating> GetRatingAsync(int gameId, int ratingId)
+        {
+            return await _context.Ratings
+                .Where(c => c.GameId == gameId && c.Id == ratingId).FirstOrDefaultAsync();
+        }
+
+        //delete rating
+        public void DeleteRating(Rating rating)
+        {
+            if (rating == null)
+            {
+                throw new ArgumentNullException(nameof(rating));
+            }
+
+            _context.Ratings.Remove(rating);
+        }
+
+        public async Task<bool> RatingExistsAsync(int ratingId)
+        {
+            return await _context.Ratings.AnyAsync(a => a.Id == ratingId);
+        }
     }
 }

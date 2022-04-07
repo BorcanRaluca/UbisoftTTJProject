@@ -23,7 +23,10 @@ namespace WebPainters.Services
         //rating
         void AddRating(Rating rating);
         Task<bool> GameExistsAsync(int gameId);
+        Task<bool> RatingExistsAsync(int ratingId);
         Task<IEnumerable<Rating>> GetRatingsAsync(int gameId);
+        void DeleteRating(Rating rating);
+        Task<Rating> GetRatingAsync(int gameId, int ratingId);
 
         Task<bool> SaveAsync();
     }
