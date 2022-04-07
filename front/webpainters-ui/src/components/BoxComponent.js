@@ -5,11 +5,13 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import "./BoxComponent.css"
+import { useNavigate } from 'react-router-dom';
 
 
 
 function BoxComponent({ _name, _headquartes, _foundingDate, _noEmployees, _key, _id }) {   
     const [foundingDate, setFoundingDate] = useState();
+    const navigate = useNavigate();
 
     useEffect(() => {
         const dateConverted = _foundingDate.split("", 10)
@@ -19,6 +21,7 @@ function BoxComponent({ _name, _headquartes, _foundingDate, _noEmployees, _key, 
     const handleDeveloperClick = () => {
             //redirect to next page through routes (passing the id? further)
             console.log(_id)
+            navigate(`/game-selection/${_id}`);
     }
 
     return (
