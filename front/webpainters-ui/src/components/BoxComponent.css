@@ -1,0 +1,10 @@
+.content {
+    /*background-color: #d0edff;*/
+    border: 0.5px solid rgb(43, 42, 42);
+    box-shadow: 3px 1px #272827;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    align-items: center;
+    display:inline-table;
+}

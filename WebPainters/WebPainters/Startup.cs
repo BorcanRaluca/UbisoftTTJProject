@@ -37,6 +37,14 @@ namespace WebPainters
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebPainters", Version = "v1" });
             });
+
+            services.AddCors(option =>
+            {
+                option.AddDefaultPolicy(builder =>
+                {
+                    builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,7 +57,14 @@ namespace WebPainters
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebPainters v1"));
             }
 
+            //app.UseRouting();
+            
+            //app.UseStaticFiles();
             app.UseRouting();
+            //added 
+            app.UseCors();
+
+
 
             app.UseAuthorization();
 

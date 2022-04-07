@@ -8,7 +8,7 @@ using WebPainters.Helpers;
 using WebPainters.Models;
 using WebPainters.Services;
 using WebPainters.Data;
-
+using Microsoft.AspNetCore.Cors;
 
 namespace WebPainters.Controllers
 {
@@ -23,6 +23,7 @@ namespace WebPainters.Controllers
             _gameDeveloperRepository = gameDeveloperRepository;
         }
 
+        
         [HttpGet]
         public async Task<IActionResult> GetDevelopers()
         {
