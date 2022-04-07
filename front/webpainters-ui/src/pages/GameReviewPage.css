@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+.game-details {
+    width: 30%;
+    height: min-content;
+    border-right: 5px dotted black;
+}
+
+.review-section {
+    background-color: rgb(226, 243, 238);
+    padding: 4px;
+    margin: 10px;
+    /* border: 2px solid black; */
+    width:100%;
+}
