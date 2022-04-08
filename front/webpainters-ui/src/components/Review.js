@@ -15,7 +15,7 @@ const [deleted, setDeleted] = useState("false")
     return (
         <>
         <Card sx={{ minWidth: 275, marginBottom: 3, width: 500 }}>
-            <IconButton onClick={() => {
+            <IconButton sx={{padding:2, float:"right"}} onClick={() => {
                 axios.delete(`https://localhost:44368/api/ratings/${_idGame}/${_id}`)
                 setDeleted({status})
                 window.location.reload(false);

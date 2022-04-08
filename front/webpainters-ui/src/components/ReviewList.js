@@ -41,6 +41,7 @@ function ReviewList({_idGame}) {
     if (reviews)
         return (
             <div>
+                <h3>Score obtained based on reviews:</h3>
                 <AverageMark style={"textAlign:right"}
                         _avgMark={Math.round(average*100)/100}
                 />
