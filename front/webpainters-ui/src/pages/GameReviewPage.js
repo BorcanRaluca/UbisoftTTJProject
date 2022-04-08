@@ -21,9 +21,9 @@ function GameReviewPage() {
     getData();
   }, []);
 
-  const [username, setUserName] = useState();
-  const [note, setNote] = useState();
-  const [comment, setComment] = useState();
+  // const [username, setUserName] = useState();
+  // const [note, setNote] = useState();
+  // const [comment, setComment] = useState();
 
 
   if (game)
@@ -39,13 +39,18 @@ function GameReviewPage() {
             _dev_id={id}
           />
           <div className="add-review-but">
-            <FormModal
+            {/* <FormModal
           _idGame={idGame}
           _id = {id}
-          />
+          /> */}
           </div>
         </div>
         <div className="review-section">
+          <div className="add-review">
+            <FormModal
+              _idGame={idGame}
+              _id={id}/>
+          </div>
           <ReviewList _idGame={idGame} />
         </div>
         <div className="sep">

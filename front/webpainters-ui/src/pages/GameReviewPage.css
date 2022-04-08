@@ -5,7 +5,7 @@
 }
 
 .game-details {
-    width: 40%;
+    width: 320px;
     margin-left: 20px;
     height: min-content;
     border-right: 5px dotted black;
@@ -26,9 +26,15 @@
     align-self:center;
 }
 
+.add-review{
+    display: inline-block;
+    float: right;
+    margin-right: 10px;
+    margin-top: 7px;
+}
+
 .review-section::-webkit-scrollbar {
     width: 5px;
-    /* height: 12px; */
 }
 
 .sep {

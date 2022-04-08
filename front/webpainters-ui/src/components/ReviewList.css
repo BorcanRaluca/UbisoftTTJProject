@@ -9,22 +9,26 @@
 
 .score-icon{
     /* make circle dont touch */
-    width: 80px;
-    height: 80px;
     -moz-border-radius: 50px;
     -webkit-border-radius: 50px;
     border-radius: 50px;
 
     display: inline-block;
-    margin-left: 120px;
+    position: fixed;
+    top: 35px;
+    left: 230px;
     border: 2px solid rgb(255, 254, 254);
     background-color: rgb(149, 220, 131);
     color: rgb(255, 255, 255);
     padding: 7px;
+    box-shadow:  0 10px 2px rgb(0 0 0 / 0.2);
 }
 
 .text-basic {
     display: inline-block;
+    justify-content: center;
+    font-family: "Gill Sans Extrabold", sans-serif;
+    text-align: center;
 }
 
 .mark {
@@ -32,6 +36,7 @@
     width: fit-content;
     height: fit-content;
     margin:auto;
+    display: inline-block;
 }
 
 .star {
@@ -39,7 +44,5 @@
     margin:auto;
     width: fit-content;
     height: fit-content;
-    /* margin-bottom: 0px; */
-    /* display: flex;
-    justify-content: center; */
+    display: inline-block;
 }

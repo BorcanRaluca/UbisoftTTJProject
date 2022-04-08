@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Review from './Review';
+import Typography from '@mui/material/Typography';
 import AverageMark from './AverageMark';
 import "./ReviewList.css"
 import StarIcon from '@mui/icons-material/Star';
@@ -43,17 +44,19 @@ function ReviewList({ _idGame }) {
             <div className='review-list'>
                 <div className='stats'>
                     <div className='text-basic'>
-                        <h3>Score obtained based on reviews:</h3>
+                        <Typography gutterBottom variant="h5" component="div" align='center'
+                            sx={{ display: 'inline-block', padding: 1.5, color: "ButtonText" }}>
+                            Read other players reviews !
+                        </Typography>
                     </div>
-                    <div className='score-icon'>
-                        <div className='star'>
-                            <StarIcon />
-                        </div>
-                        <div className='mark'>
-                            <AverageMark
-                                _avgMark={Math.round(average * 100) / 100} />
-                        </div>
-
+                </div>
+                <div className='score-icon'>
+                    <div className='star'>
+                        <StarIcon />
+                    </div>
+                    <div className='mark'>
+                        <AverageMark
+                            _avgMark={Math.round(average * 100) / 100} />
                     </div>
                 </div>
                 {reviews.map((item, key) => (
