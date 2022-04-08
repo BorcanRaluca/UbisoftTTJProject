@@ -1,0 +1,7 @@
+.text-homepage {
+    display: grid;
+    width: 90%;
+    margin: 10px;
+    padding: 10px;
+    border: 2px double rgb(187, 233, 255);
+}

@@ -38,12 +38,8 @@ function GameReviewPage() {
             _id={game.id}
             _dev_id={id}
           />
-          <div className="add-review-but">
-            {/* <FormModal
-          _idGame={idGame}
-          _id = {id}
-          /> */}
-          </div>
+          {/* <div className="add-review-but">
+          </div> */}
         </div>
         <div className="review-section">
           <div className="add-review">
