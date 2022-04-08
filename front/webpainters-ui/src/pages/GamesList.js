@@ -15,7 +15,6 @@ function GamesList() {
                 setGames(response.data)
             })
     }
-    //get data
     useEffect(() => {
         getData();
     }, [])
@@ -23,7 +22,7 @@ function GamesList() {
     if (games)
         return (    
             <>
-             <h1 style={{textAlign:"center"}}>Page games for {nameCompany}</h1>
+             <h1 style={{textAlign:"center"}}>Listed games for {nameCompany}</h1>
                 <div className="game-list" style={{margin:5}}>
                     {games.map((item, key) => (
                         <CardImage 

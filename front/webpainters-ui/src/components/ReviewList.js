@@ -3,9 +3,14 @@ import { useParams } from 'react-router';
 import axios from 'axios';
 import Review from './Review';
 import AverageMark from './AverageMark';
+import { alignProperty } from '@mui/material/styles/cssUtils';
+import { textAlign } from '@mui/system';
 
 function ReviewList({_idGame}) {
     const [reviews, setReviews] = useState([]);
+    const [status, setStatus] = useState(false);
+
+    const handleState = () => setStatus(!status)
 
     const URL = `https://localhost:44368/api/ratings/${_idGame}`;
 
@@ -27,26 +32,26 @@ function ReviewList({_idGame}) {
         }
         avg /= reviews.length;
         setAverage(avg);
-        console.log(avg);
     }
     useEffect(() => {
         calcRevAvg();
-        console.log("Effect reviews");
-    }, [reviews])
+    }, [reviews, status])
 
 
     if (reviews)
         return (
             <div>
-                <AverageMark 
-                        _avgMark={average}
+                <AverageMark style={"textAlign:right"}
+                        _avgMark={Math.round(average*100)/100}
                 />
                 {reviews.map((item, key) => (
                     <Review 
                         _username={item.userName}
                         _id={item.id}
+                        _idGame = {_idGame}
                         _comment={item.comment}
                         _note={item.note}
+                        _status = {handleState}
                     />
                 ))}
             </div>

@@ -2283,19 +2283,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HP PAVILION\\.nuget\\packages\\": {}
+    "C:\\Users\\pc\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HP PAVILION\\Desktop\\UbisoftTTJProject\\WebPainters\\WebPainters\\WebPainters.csproj",
+      "projectUniqueName": "C:\\Users\\pc\\Desktop\\UbisoftTTJProject\\WebPainters\\WebPainters\\WebPainters.csproj",
       "projectName": "WebPainters",
-      "projectPath": "C:\\Users\\HP PAVILION\\Desktop\\UbisoftTTJProject\\WebPainters\\WebPainters\\WebPainters.csproj",
-      "packagesPath": "C:\\Users\\HP PAVILION\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HP PAVILION\\Desktop\\UbisoftTTJProject\\WebPainters\\WebPainters\\obj\\",
+      "projectPath": "C:\\Users\\pc\\Desktop\\UbisoftTTJProject\\WebPainters\\WebPainters\\WebPainters.csproj",
+      "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\pc\\Desktop\\UbisoftTTJProject\\WebPainters\\WebPainters\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\HP PAVILION\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

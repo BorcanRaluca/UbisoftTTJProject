@@ -7,5 +7,4 @@ function AverageMark({_avgMark}) {
         </div>
     );
 }
-
 export default AverageMark;
