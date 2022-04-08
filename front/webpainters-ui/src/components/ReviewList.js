@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router';
 import axios from 'axios';
 import Review from './Review';
 import AverageMark from './AverageMark';
-import { alignProperty } from '@mui/material/styles/cssUtils';
-import { textAlign } from '@mui/system';
+import "./ReviewList.css"
+import StarIcon from '@mui/icons-material/Star';
 
-function ReviewList({_idGame}) {
+
+function ReviewList({ _idGame }) {
     const [reviews, setReviews] = useState([]);
     const [status, setStatus] = useState(false);
 
@@ -27,7 +27,7 @@ function ReviewList({_idGame}) {
     const [average, setAverage] = useState();
     const calcRevAvg = () => {
         let avg = 0;
-        for(let i = 0; i < reviews.length; i++) {
+        for (let i = 0; i < reviews.length; i++) {
             avg += reviews[i].note;
         }
         avg /= reviews.length;
@@ -40,19 +40,30 @@ function ReviewList({_idGame}) {
 
     if (reviews)
         return (
-            <div>
-                <h3>Score obtained based on reviews:</h3>
-                <AverageMark style={"textAlign:right"}
-                        _avgMark={Math.round(average*100)/100}
-                />
+            <div className='review-list'>
+                <div className='stats'>
+                    <div className='text-basic'>
+                        <h3>Score obtained based on reviews:</h3>
+                    </div>
+                    <div className='score-icon'>
+                        <div className='star'>
+                            <StarIcon />
+                        </div>
+                        <div className='mark'>
+                            <AverageMark
+                                _avgMark={Math.round(average * 100) / 100} />
+                        </div>
+
+                    </div>
+                </div>
                 {reviews.map((item, key) => (
-                    <Review 
+                    <Review
                         _username={item.userName}
                         _id={item.id}
-                        _idGame = {_idGame}
+                        _idGame={_idGame}
                         _comment={item.comment}
                         _note={item.note}
-                        _status = {handleState}
+                        _status={handleState}
                     />
                 ))}
             </div>

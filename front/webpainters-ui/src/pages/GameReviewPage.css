@@ -15,7 +15,7 @@
 
 .review-section {
     background-color: rgb(230, 255, 224);
-    border-bottom: 5px dotted black;
+    /* border-bottom: 5px dotted black; */
     padding: 10px;
     margin: 40px;
     width:700px;
@@ -27,7 +27,7 @@
 }
 
 .review-section::-webkit-scrollbar {
-    width: 12px;
+    width: 5px;
     /* height: 12px; */
 }
 
@@ -46,7 +46,7 @@
 .review-section::-webkit-scrollbar-thumb {
     background-color: whitesmoke;
     border-radius: 30px;
-    border: 2px solid #0F131A;
+    border: 2px solid rgb(230, 255, 224);
     width: 1em;
 }
 

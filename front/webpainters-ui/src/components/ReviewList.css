@@ -1,0 +1,45 @@
+.review-list {
+    margin-left: 20px;
+}
+
+.stats {
+    width: fit-content;
+    margin-bottom: 10px;
+}
+
+.score-icon{
+    /* make circle dont touch */
+    width: 80px;
+    height: 80px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+
+    display: inline-block;
+    margin-left: 120px;
+    border: 2px solid rgb(255, 254, 254);
+    background-color: rgb(149, 220, 131);
+    color: rgb(255, 255, 255);
+    padding: 7px;
+}
+
+.text-basic {
+    display: inline-block;
+}
+
+.mark {
+    font-size:10px;
+    width: fit-content;
+    height: fit-content;
+    margin:auto;
+}
+
+.star {
+    color: rgb(255, 255, 148);
+    margin:auto;
+    width: fit-content;
+    height: fit-content;
+    /* margin-bottom: 0px; */
+    /* display: flex;
+    justify-content: center; */
+}
